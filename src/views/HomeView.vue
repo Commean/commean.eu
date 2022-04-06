@@ -6,7 +6,8 @@
     <Subtitle />
 
     <div class="motion-path">
-      <div ref="input" class="square el" @click="submit"></div>
+      <div id="vehicle-01" class="square-abs"></div>
+      <div id="vehicle-02" class="square-abs"></div>
       <svg
         width="210mm"
         height="297mm"
@@ -18,7 +19,7 @@
           d="m29.961-0.18323v86.056c0 15.284 0.0041 15.321 15.321 15.321h167.34"
           fill="none"
           stroke="#000"
-          stroke-width=".26458px"
+          stroke-width="1px"
         />
       </svg>
     </div>
@@ -30,6 +31,12 @@
   background-color: red;
   height: 10px;
   width: 10px;
+}
+.square-abs {
+  background-color: red;
+  height: 10px;
+  width: 10px;
+  position: absolute;
 }
 </style>
 
@@ -52,13 +59,28 @@ export default {
       var path = anime.path(".motion-path path");
 
       anime({
-        targets: ".motion-path .el",
+        targets: ".motion-path #vehicle-01",
         translateX: path("x"),
         translateY: path("y"),
         rotate: path("angle"),
-        easing: "linear",
-        duration: 2000,
+        easing: function (el, i, total) {
+          return function (t) {
+            return t * (i + 1);
+          };
+        },
+        duration: 5000,
         loop: true,
+      });
+
+      anime({
+        targets: ".motion-path #vehicle-02",
+        translateX: path("x"),
+        translateY: path("y"),
+        rotate: path("angle"),
+        easing: "easeInOutBounce",
+        duration: 5000,
+        loop: true,
+        delay: 150,
       });
     },
   },
