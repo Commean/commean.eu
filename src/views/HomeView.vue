@@ -25,7 +25,6 @@
 
 <script lang="ts">
 import { createApp } from "vue";
-import anime from "animejs/lib/anime.es.js";
 import logo from "./../components/icons/CommeanLogo.vue";
 
 export default {
@@ -33,15 +32,6 @@ export default {
   mounted() {
     console.log(`the component is now mounted.`);
     createApp(logo).mount("#commean");
-    anime({
-      targets: ".line-drawing .lines path",
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: "easeOutBounce",
-      duration: 1500,
-      delay: function (el, i) {
-        return i * 100;
-      },
-    });
   },
   methods: {
     submit() {},
