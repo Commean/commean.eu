@@ -2,8 +2,7 @@
   <main>
     <p>Hi</p>
     <div ref="input" class="square" @click="submit"></div>
-
-    <div id="commean" class="line-drawing"></div>
+    <div id="commean"></div>
   </main>
 </template>
 
