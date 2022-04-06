@@ -5,19 +5,13 @@
 </template>
 
 <style>
-h1 {
-  margin: 20px 0;
+.subtitle h1 {
+  margin: 20px auto;
   border: 2px solid;
   border-left: 0;
   border-right: 0;
-  padding: 0px, 10px;
-  width: auto;
-  display: inline-block;
-}
-
-.subtitle {
-    float: right;
-    margin-right: 32px;
+  padding: 0px 10px;
+  text-align: center;
 }
 </style>
 

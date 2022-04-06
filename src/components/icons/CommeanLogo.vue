@@ -1,6 +1,7 @@
 <template>
   <div class="line-drawing">
     <svg
+      id="commean-logo"
       width="351.12"
       height="54.899"
       version="1.1"
@@ -47,7 +48,7 @@
 </template>
 
 <style>
-svg {
+#commean-logo {
   height: 128px;
   width: 100%;
   padding: 10px 0;
