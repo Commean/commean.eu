@@ -50,6 +50,7 @@
 svg {
   height: 128px;
   width: 100%;
+  padding: 10px 0;
 
   display: flex;
   justify-content: center;

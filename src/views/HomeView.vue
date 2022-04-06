@@ -3,6 +3,7 @@
     <p>Hi</p>
     <div ref="input" class="square" @click="submit"></div>
     <CommeanLogo />
+    <Subtitle />
   </main>
 </template>
 
@@ -16,6 +17,7 @@
 
 <script lang="ts">
 import CommeanLogo from "./../components/icons/CommeanLogo.vue";
+import Subtitle from "./../components/icons/Subtitle.vue";
 
 export default {
   mounted() {
@@ -23,6 +25,7 @@ export default {
   },
   components: {
     CommeanLogo,
+    Subtitle,
   },
 };
 </script>
