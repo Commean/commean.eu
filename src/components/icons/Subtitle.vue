@@ -1,6 +1,6 @@
 <template>
   <div class="subtitle">
-    <h1>Commeatus Analysis</h1>
+    <h1 class="subtitle-text">Commeatus Analysis</h1>
   </div>
 </template>
 
@@ -21,13 +21,10 @@ import anime from "animejs/lib/anime.es.js";
 export default {
   mounted() {
     anime({
-      targets: ".line-drawing .lines path",
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: "easeOutBounce",
-      duration: 1500,
-      delay: function (el, i) {
-        return i * 100;
-      },
+      targets: ".subtitle",
+      easing: "spring(1, 80, 10, 0)",
+      duration: 750,
+      translateX: [1000, 0],
     });
   },
 };
