@@ -46,6 +46,16 @@
   </div>
 </template>
 
+<style>
+svg {
+  height: 128px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+</style>
+
 <script lang="ts">
 import anime from "animejs/lib/anime.es.js";
 
