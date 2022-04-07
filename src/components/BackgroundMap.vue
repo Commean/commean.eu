@@ -138,6 +138,7 @@ import anime from "animejs/lib/anime.es.js";
 
 const LOOP = {
   duration: 15000,
+  factor: 2,
 };
 
 export default {
@@ -154,15 +155,78 @@ export default {
     });
 
     // Animate cars
-    this.animeVehicle("#vehicle-01", "#path-1", "linear", 10000, 800, 4200);
-    this.animeVehicle("#vehicle-02", "#path-1", "linear", 10000, 2300, 2700);
-    this.animeVehicle("#vehicle-03", "#path-2", "linear", 12000, 800, 2200);
-    this.animeVehicle("#vehicle-04", "#path-3", "linear", 13500, 1000, 500);
-    this.animeVehicle("#vehicle-05", "#path-3", "linear", 13750, 5000, 0);
-    this.animeVehicle("#vehicle-06", "#path-4", "linear", 5000, 5000, 0);
-    this.animeVehicle("#vehicle-07", "#path-5", "linear", 7000, 5000, 0);
-    this.animeVehicle("#vehicle-08", "#path-6", "linear", 20000, 200, 0);
-    this.animeVehicle("#vehicle-09", "#path-7", "linear", 35000, 200, 0);
+    this.animeVehicle(
+      "#vehicle-01",
+      "#path-1",
+      "linear",
+      LOOP.factor * 10000,
+      LOOP.factor * 800,
+      LOOP.factor * 4200
+    );
+    this.animeVehicle(
+      "#vehicle-02",
+      "#path-1",
+      "linear",
+      LOOP.factor * 10000,
+      LOOP.factor * 2300,
+      LOOP.factor * 2700
+    );
+    this.animeVehicle(
+      "#vehicle-03",
+      "#path-2",
+      "linear",
+      LOOP.factor * 12000,
+      LOOP.factor * 800,
+      LOOP.factor * 2200
+    );
+    this.animeVehicle(
+      "#vehicle-04",
+      "#path-3",
+      "linear",
+      LOOP.factor * 13500,
+      LOOP.factor * 1000,
+      LOOP.factor * 500
+    );
+    this.animeVehicle(
+      "#vehicle-05",
+      "#path-3",
+      "linear",
+      LOOP.factor * 13750,
+      LOOP.factor * 5000,
+      LOOP.factor * 0
+    );
+    this.animeVehicle(
+      "#vehicle-06",
+      "#path-4",
+      "linear",
+      LOOP.factor * 5000,
+      LOOP.factor * 5000,
+      LOOP.factor * 0
+    );
+    this.animeVehicle(
+      "#vehicle-07",
+      "#path-5",
+      "linear",
+      LOOP.factor * 7000,
+      LOOP.factor * 5000,
+      LOOP.factor * 0
+    );
+    this.animeVehicle(
+      "#vehicle-08",
+      "#path-6",
+      "linear",
+      LOOP.factor * 20000,
+      LOOP.factor * 200,
+      LOOP.factor * 0
+    );
+    this.animeVehicle(
+      "#vehicle-09",
+      "#path-7",
+      "linear",
+      LOOP.factor * 35000,
+      LOOP.factor * 200,
+      LOOP.factor * 0
+    );
   },
   methods: {
     animeVehicle(
