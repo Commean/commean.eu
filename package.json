@@ -12,7 +12,8 @@
   "dependencies": {
     "animejs": "^3.2.1",
     "vue": "^3.2.31",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "vuejs3-logger": "1.0.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
