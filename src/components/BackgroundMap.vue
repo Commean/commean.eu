@@ -9,6 +9,7 @@
       <div id="vehicle-06" class="square-abs"></div>
       <div id="vehicle-07" class="square-abs"></div>
       <div id="vehicle-08" class="square-abs"></div>
+      <div id="vehicle-09" class="square-abs"></div>
       <svg
         version="1.1"
         viewBox="0 0 665.8 404.5"
@@ -154,8 +155,14 @@ export default {
 
     // Animate cars
     this.animeVehicle("#vehicle-01", "#path-1", "linear", 10000, 800, 4200);
-    this.animeVehicle("#vehicle-02", "#path-2", "linear", 12000, 800, 2200);
-    this.animeVehicle("#vehicle-03", "#path-1", "linear", 10000, 2300, 2700);
+    this.animeVehicle("#vehicle-02", "#path-1", "linear", 10000, 2300, 2700);
+    this.animeVehicle("#vehicle-03", "#path-2", "linear", 12000, 800, 2200);
+    this.animeVehicle("#vehicle-04", "#path-3", "linear", 13500, 1000, 500);
+    this.animeVehicle("#vehicle-05", "#path-3", "linear", 13750, 5000, 0);
+    this.animeVehicle("#vehicle-06", "#path-4", "linear", 5000, 5000, 0);
+    this.animeVehicle("#vehicle-07", "#path-5", "linear", 7000, 5000, 0);
+    this.animeVehicle("#vehicle-08", "#path-6", "linear", 20000, 200, 0);
+    this.animeVehicle("#vehicle-09", "#path-7", "linear", 35000, 200, 0);
   },
   methods: {
     animeVehicle(
