@@ -6,7 +6,7 @@
 
 <style>
 .subtitle h1 {
-  margin: 20px auto;
+  margin: 20px auto 0px;
   border: 2px solid;
   border-left: 0;
   border-right: 0;

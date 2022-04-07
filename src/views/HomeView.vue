@@ -4,6 +4,7 @@
     <div ref="input" class="square" @click="submit"></div>
     <CommeanLogo />
     <Subtitle />
+    <BackgroundMap />
 
     <div class="motion-path">
       <div id="vehicle-01" class="square-abs"></div>
@@ -41,8 +42,10 @@
 </style>
 
 <script lang="ts">
+import BackgroundMap from "./../components/BackgroundMap.vue";
 import CommeanLogo from "./../components/icons/CommeanLogo.vue";
 import Subtitle from "./../components/icons/Subtitle.vue";
+
 import anime from "animejs/lib/anime.es.js";
 
 export default {
@@ -50,6 +53,7 @@ export default {
     console.log(`the component is now mounted.`);
   },
   components: {
+    BackgroundMap,
     CommeanLogo,
     Subtitle,
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class="line-drawing">
+  <div class="commean-logo-line-drawing-commean">
     <svg
       id="commean-logo"
       width="351.12"
@@ -9,7 +9,7 @@
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>Commean</title>
-      <g class="lines" transform="translate(-64.131 -115.14)">
+      <g class="commean-logo-lines" transform="translate(-64.131 -115.14)">
         <g fill="none" stroke="#dd551a" aria-label="Commean">
           <path
             transform="translate(5.4228)"
@@ -64,7 +64,7 @@ import anime from "animejs/lib/anime.es.js";
 export default {
   mounted() {
     anime({
-      targets: ".line-drawing .lines path",
+      targets: ".commean-logo-line-drawing-commean .commean-logo-lines path",
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: "easeOutBounce",
       duration: 1500,
