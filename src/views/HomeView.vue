@@ -3,7 +3,8 @@
     <p @click="submit">Hi</p>
     <CommeanLogo />
     <Subtitle />
-    <BackgroundMap drawVehicles="true"/>
+    <BackgroundMap :drawVehicles="false"/>
+    
   </main>
 </template>
 
