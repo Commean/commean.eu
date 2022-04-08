@@ -10,6 +10,16 @@
       <div id="vehicle-07" class="square-abs"></div>
       <div id="vehicle-08" class="square-abs"></div>
       <div id="vehicle-09" class="square-abs"></div>
+      <div id="vehicle-10" class="square-abs"></div>
+      <div id="vehicle-11" class="square-abs"></div>
+      <div id="vehicle-12" class="square-abs"></div>
+      <div id="vehicle-13" class="square-abs"></div>
+      <div id="vehicle-14" class="square-abs"></div>
+      <div id="vehicle-15" class="square-abs"></div>
+      <div id="vehicle-16" class="square-abs"></div>
+      <div id="vehicle-17" class="square-abs"></div>
+      <div id="vehicle-18" class="square-abs"></div>
+      <div id="vehicle-19" class="square-abs"></div>
       <svg
         version="1.1"
         viewBox="0 0 665.8 404.5"
@@ -180,6 +190,14 @@ export default {
       LOOP.factor * 2200
     );
     this.animeVehicle(
+      "#vehicle-10",
+      "#path-2",
+      "linear",
+      LOOP.factor * 10000,
+      LOOP.factor * 0,
+      LOOP.factor * 0
+    );
+    this.animeVehicle(
       "#vehicle-04",
       "#path-3",
       "linear",
@@ -204,6 +222,14 @@ export default {
       LOOP.factor * 0
     );
     this.animeVehicle(
+      "#vehicle-11",
+      "#path-4",
+      "linear",
+      LOOP.factor * 7000,
+      LOOP.factor * 2000,
+      LOOP.factor * 0
+    );
+    this.animeVehicle(
       "#vehicle-07",
       "#path-5",
       "linear",
@@ -212,11 +238,51 @@ export default {
       LOOP.factor * 0
     );
     this.animeVehicle(
+      "#vehicle-12",
+      "#path-5",
+      "linear",
+      LOOP.factor * 6800,
+      LOOP.factor * 1000,
+      LOOP.factor * 0
+    );
+    this.animeVehicle(
+      "#vehicle-13",
+      "#path-5",
+      "linear",
+      LOOP.factor * 7200,
+      LOOP.factor * 1250,
+      LOOP.factor * 0
+    );
+    this.animeVehicle(
+      "#vehicle-14",
+      "#path-5",
+      "linear",
+      LOOP.factor * 7200,
+      LOOP.factor * 2000,
+      LOOP.factor * 250
+    );
+    this.animeVehicle(
+      "#vehicle-14",
+      "#path-5",
+      "linear",
+      LOOP.factor * 7500,
+      LOOP.factor * 2500,
+      LOOP.factor * 250
+    );
+    this.animeVehicle(
       "#vehicle-08",
       "#path-6",
       "linear",
       LOOP.factor * 20000,
       LOOP.factor * 200,
+      LOOP.factor * 0
+    );
+    this.animeVehicle(
+      "#vehicle-15",
+      "#path-6",
+      "linear",
+      LOOP.factor * 15000,
+      LOOP.factor * 2000,
       LOOP.factor * 0
     );
     this.animeVehicle(
