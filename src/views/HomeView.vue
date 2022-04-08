@@ -3,7 +3,7 @@
     <p @click="submit">Hi</p>
     <CommeanLogo />
     <Subtitle />
-    <BackgroundMap />
+    <BackgroundMap drawVehicles="true"/>
   </main>
 </template>
 

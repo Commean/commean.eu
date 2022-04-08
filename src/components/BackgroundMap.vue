@@ -152,6 +152,9 @@ const LOOP = {
 };
 
 export default {
+  props: {
+    drawVehicles: Boolean,
+  },
   mounted() {
     // Animate map loading
     anime({
