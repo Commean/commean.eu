@@ -1,17 +1,23 @@
 <template>
   <div class="subtitle">
-    <h1 class="subtitle-text">Commeatus Analysis</h1>
+    <h1>Commeatus Analysis</h1>
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import "../../scss/_variables.scss";
+
 .subtitle h1 {
-  margin: 20px auto 0px;
+  margin: 0 auto;
   border: 2px solid;
   border-left: 0;
   border-right: 0;
   padding: 0px 10px;
   text-align: center;
+
+  @media (min-width: $switch-to-desktop-view) {
+    margin: 20px auto 0;
+  }
 }
 </style>
 

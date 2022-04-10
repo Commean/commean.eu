@@ -111,14 +111,14 @@
 </template>
 
 <style lang="scss">
-$switch-bg-to-desktop-view: 1200px;
+@import "../scss/_variables.scss";
 
 .background-map-line-drawing-map {
   overflow: hidden;
   display: flex;
   justify-content: center;
 
-  @media (min-width: $switch-bg-to-desktop-view) {
+  @media (min-width: $switch-to-desktop-view) {
     width: 140%;
   }
 
@@ -127,7 +127,7 @@ $switch-bg-to-desktop-view: 1200px;
     margin-top: -10%;
     padding: 10px 0;
 
-    @media (min-width: $switch-bg-to-desktop-view) {
+    @media (min-width: $switch-to-desktop-view) {
       width: 100%;
     }
 
@@ -135,7 +135,7 @@ $switch-bg-to-desktop-view: 1200px;
       z-index: -100;
       height: 1500px;
 
-      @media (min-width: $switch-bg-to-desktop-view) {
+      @media (min-width: $switch-to-desktop-view) {
         height: auto;
       }
     }
