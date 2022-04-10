@@ -3,13 +3,11 @@
     <p @click="submit">Hi</p>
     <CommeanLogo />
     <Subtitle />
-    <BackgroundMap :drawVehicles="true"/>
-    
+    <BackgroundMap />
   </main>
 </template>
 
-<style>
-</style>
+<style></style>
 
 <script lang="ts">
 import BackgroundMap from "./../components/BackgroundMap.vue";

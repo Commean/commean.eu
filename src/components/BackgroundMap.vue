@@ -162,9 +162,6 @@ const LOOP = {
 };
 
 export default {
-  props: {
-    drawVehicles: Boolean,
-  },
   mounted() {
     // Animate map loading
     anime({
@@ -177,7 +174,7 @@ export default {
       },
     });
 
-    if (this.drawVehicles) {
+    if (navigator.userAgent.match(/iPad|iPhone/i)) {
       // Animate cars
       this.animeVehicle(
         "#vehicle-01",
