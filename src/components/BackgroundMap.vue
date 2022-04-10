@@ -116,11 +116,10 @@ $switch-bg-to-desktop-view: 1200px;
 .background-map-line-drawing-map {
   overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+
   @media (min-width: $switch-bg-to-desktop-view) {
     width: 140%;
-    height: auto;
   }
 
   #background-map {
@@ -129,12 +128,12 @@ $switch-bg-to-desktop-view: 1200px;
     padding: 10px 0;
 
     @media (min-width: $switch-bg-to-desktop-view) {
-      width: 140%;
-      height: auto;
+      width: 100%;
     }
+
     svg {
-      height: 1500px;
       z-index: -100;
+      height: 1500px;
 
       @media (min-width: $switch-bg-to-desktop-view) {
         height: auto;
