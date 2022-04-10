@@ -51,7 +51,7 @@
 #commean-logo {
   height: 128px;
   width: 100%;
-  padding: 10px 0;
+  padding: 10px 20px;
 
   display: flex;
   justify-content: center;
