@@ -4,6 +4,12 @@
     <CommeanLogo />
     <Subtitle />
     <BackgroundMap />
+    <FloatingCard>
+      <template #heading>Open Source</template>
+      <template #icon>TODO</template>
+
+      Commean is Open Source.
+    </FloatingCard>
   </main>
 </template>
 
@@ -12,6 +18,7 @@
 <script lang="ts">
 import BackgroundMap from "./../components/BackgroundMap.vue";
 import CommeanLogo from "./../components/icons/CommeanLogo.vue";
+import FloatingCard from "./../components/FloatingCard.vue";
 import Subtitle from "./../components/icons/Subtitle.vue";
 
 export default {
@@ -21,6 +28,7 @@ export default {
   components: {
     BackgroundMap,
     CommeanLogo,
+    FloatingCard,
     Subtitle,
   },
   methods: {

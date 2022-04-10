@@ -114,6 +114,8 @@
 @import "../scss/_variables.scss";
 
 .background-map-line-drawing-map {
+  position: absolute;
+  width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
