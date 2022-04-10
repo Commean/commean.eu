@@ -10,7 +10,7 @@
     >
       <title>Commean</title>
       <g class="commean-logo-lines" transform="translate(-64.131 -115.14)">
-        <g fill="none" stroke="#dd551a" aria-label="Commean">
+        <g fill="none" stroke="#F26419" aria-label="Commean">
           <path
             transform="translate(5.4228)"
             d="m102.04 124.06c-4.2832-3.2678-9.6858-5.3281-15.242-5.3281h-0.39775c-13.755 0-24.102 10.338-24.102 23.455 0 13.3 10.62 23.752 24.275 23.752 5.5405 0 10.999-2.2337 15.42-5.6543"
