@@ -13,10 +13,19 @@
 <style lang="scss" scoped>
 .card {
   display: inline-grid;
-  background-color: white;
-  padding: 10px;
+  background-color: var(--color-background-soft);
   box-shadow: 0 2px 4px 0 black;
   border-radius: 25px;
+  overflow: hidden;
+
+  * {
+    padding: 0 25px;
+  }
+
+  h2 {
+    background-color: var(--color-card-background);
+    color: var(--color-text-inverse);
+  }
 }
 </style>
 
