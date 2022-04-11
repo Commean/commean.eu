@@ -10,25 +10,21 @@
 
 <style></style>
 
-<script lang="ts">
+<script setup lang="ts">
 import BackgroundMap from "./../components/BackgroundMap.vue";
 import Cards from "./../components/cards/Cards.vue";
 import CommeanLogo from "./../components/icons/CommeanLogo.vue";
 import Subtitle from "./../components/icons/Subtitle.vue";
+</script>
 
+<script lang="ts">
 export default {
   mounted() {
     console.log(`the component is now mounted.`);
   },
-  components: {
-    BackgroundMap,
-    Cards,
-    CommeanLogo,
-    Subtitle,
-  },
   methods: {
     submit() {
-      console.log("h");
+      console.log("Test");
     },
   },
 };
