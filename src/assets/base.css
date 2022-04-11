@@ -8,8 +8,8 @@
   --vt-c-black-soft: #222222;
   --vt-c-black-mute: #282828;
 
-  --vt-c-primary: #F26419;
-  --vt-c-secondary: #F6AE2D;
+  --vt-c-primary: #f26419;
+  --vt-c-secondary: #f6ae2d;
 
   --vt-c-text-light-1: var(--vt-c-black);
   --vt-c-text-dark-1: var(--vt-c-white);
@@ -24,6 +24,10 @@
   --color-text: var(--vt-c-text-light-1);
   --color-text-inverse: var(--vt-c-text-dark-1);
   --color-card-background: var(--vt-c-secondary);
+
+  --color-gradient-1: var(--vt-c-secondary);
+  --color-gradient-2: var(--vt-c-secondary);
+  --color-gradient-3: var(--vt-c-primary);
 
   --section-gap: 160px;
 }

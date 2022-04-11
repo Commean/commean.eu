@@ -1,22 +1,22 @@
-
-
 <template>
   <div class="grid-container">
     <FloatingCard>
       <template #heading>Open Source</template>
-      <template #icon>TODO</template>
+      <template #icon><img src="/src/assets/icons/code_24dp.svg" /></template>
 
       Commean is Open Source.
     </FloatingCard>
     <FloatingCard>
       <template #heading>Local processing</template>
-      <template #icon>TODO</template>
+      <template #icon><img src="/src/assets/icons/memory_24dp.svg" /></template>
 
       Commean is Open Source.
     </FloatingCard>
     <FloatingCardWide>
       <template #heading>Local processing</template>
-      <template #icon>TODO</template>
+      <template #icon
+        ><img src="/src/assets/icons/security_24dp.svg"
+      /></template>
 
       Commean is Open Source.
     </FloatingCardWide>
@@ -32,7 +32,6 @@
   margin: 50px auto;
   padding: 0 20px;
 }
-
 </style>
 
 <script setup lang="ts">

@@ -1,16 +1,18 @@
 <template>
   <section class="card">
-    <h2>
-      <slot name="heading"></slot>
-    </h2>
-    <div><slot name="icon"></slot></div>
+    <div class="header">
+      <h2>
+        <slot name="heading"></slot>
+      </h2>
+      <div class="icon"><slot name="icon"></slot></div>
+    </div>
     <div class="details">
       <slot></slot>
     </div>
   </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .card {
   display: inline-grid;
   background-color: var(--color-background-soft);
@@ -18,13 +20,47 @@
   border-radius: 25px;
   overflow: hidden;
 
-  * {
+  grid-template-areas: "header" "details";
+  $padding-card: 25px;
+  $icon-size: 64px;
+
+  .header {
+    grid-areas: "header";
+    display: inline-grid;
+    background: rgb(246, 174, 45);
+    background: linear-gradient(
+      45deg,
+      var(--color-gradient-1) 0%,
+      var(--color-gradient-2) 35%,
+      var(--color-gradient-3) 100%
+    );
+    color: var(--color-text-inverse);
     padding: 0 25px;
+    grid-template-areas: "headline icon";
+    grid-template-columns: auto $icon-size;
+
+    h2 {
+      grid-area: headline;
+      width: 100%;
+      margin: auto;
+    }
+
+    .icon {
+      grid-area: icon;
+      height: 64px;
+      margin: 10px 0;
+
+      img {
+        height: 64px;
+        width: 64px;
+        margin: 0 auto;
+      }
+    }
   }
 
-  h2 {
-    background-color: var(--color-card-background);
-    color: var(--color-text-inverse);
+  .details {
+    padding: 0 25px;
+    grid-area: details;
   }
 }
 </style>
