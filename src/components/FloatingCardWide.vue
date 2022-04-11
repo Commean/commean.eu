@@ -7,6 +7,13 @@
   </FloatingCardBase>
 </template>
 
+<style lang="scss" scoped>
+.card {
+  grid-column: 1 / span 2;
+  margin: auto 20%;
+}
+</style>
+
 <script setup lang="ts">
 import FloatingCardBase from "./FloatingCardBase.vue";
 </script>
