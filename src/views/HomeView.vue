@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import BackgroundMap from "./../components/BackgroundMap.vue";
-import Cards from "./../components/Cards.vue";
+import Cards from "./../components/cards/Cards.vue";
 import CommeanLogo from "./../components/icons/CommeanLogo.vue";
 import Subtitle from "./../components/icons/Subtitle.vue";
 
