@@ -20,9 +20,10 @@
   border-radius: 25px;
   overflow: hidden;
 
-  grid-template-areas: "header" "details";
-  $padding-card: 25px;
+  $margin-card: 10px;
   $icon-size: 64px;
+  grid-template-areas: "header" "details";
+  grid-template-rows: calc($icon-size + 2 * $margin-card) auto;
 
   .header {
     grid-areas: "header";
@@ -47,12 +48,12 @@
 
     .icon {
       grid-area: icon;
-      height: 64px;
-      margin: 10px 0;
+      height: $icon-size;
+      margin: $margin-card 0;
 
       img {
-        height: 64px;
-        width: 64px;
+        height: $icon-size;
+        width: $icon-size;
         margin: 0 auto;
       }
     }
