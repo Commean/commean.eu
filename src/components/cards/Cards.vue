@@ -3,8 +3,10 @@
     <FloatingCard>
       <template #heading>Open Source</template>
       <template #icon><img src="/src/assets/icons/code_24dp.svg" /></template>
-
-      Commean is Open Source.
+      Commean is Open Source. This means that the source code can be looked up
+      by <i>everybody</i>. This is important to us, because otherwise this would just
+      be a black box and nobody (except us) would know what is happening. <br /><br />
+      The source code can be found at <a href="https://gitlab.com/commean">GitLab</a>.
     </FloatingCard>
     <FloatingCard>
       <template #heading>Local processing</template>

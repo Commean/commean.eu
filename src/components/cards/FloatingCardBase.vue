@@ -59,7 +59,7 @@
   }
 
   .details {
-    padding: 0 25px;
+    padding: 15px 25px;
     grid-area: details;
   }
 }
