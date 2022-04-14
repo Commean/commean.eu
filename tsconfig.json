@@ -8,6 +8,7 @@
     "resolveJsonModule": true,
     "allowJs": true,
     "noImplicitAny": false,
+    "types": ["node"],
     "paths": {
       "@/*": ["./src/*"]
     }
