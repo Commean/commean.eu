@@ -111,7 +111,7 @@
 </template>
 
 <style lang="scss">
-@import "../scss/_variables.scss";
+@import "/src/scss/_variables.scss";
 
 .background-map-line-drawing-map {
   position: absolute;

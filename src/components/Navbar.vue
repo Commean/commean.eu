@@ -8,7 +8,7 @@
 </template>
 
 <style lang="scss">
-@import "../scss/_variables.scss";
+@import "/src/scss/_variables.scss";
 
 nav {
   width: 100%;
