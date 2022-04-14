@@ -311,7 +311,7 @@ export default {
   methods: {
     animeVehicle(
       vehicle: string,
-      path: string,
+      path_name: string,
       easing: any = "linear",
       duration: number = LOOP.duration,
       delay: number = 0,
@@ -321,11 +321,11 @@ export default {
         this.$log.info(
           "BackgroundMap will run out of sync!",
           vehicle,
-          path,
+          path_name,
           duration + delay + endDelay
         );
       }
-      var path = anime.path(path);
+      var path: (a: string) => Number = anime.path(path_name);
       anime({
         targets: vehicle,
         translateX: path("x"),
