@@ -10,3 +10,9 @@
 <script setup lang="ts">
 import FloatingCardBase from "./FloatingCardBase.vue";
 </script>
+
+<script lang="ts">
+export default {
+  setup() {},
+};
+</script>
