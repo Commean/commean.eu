@@ -26,7 +26,7 @@
   grid-template-rows: calc($icon-size + 2 * $margin-card) auto;
 
   .header {
-    grid-areas: "header";
+    grid-area: header;
     display: inline-grid;
     background: rgb(246, 174, 45);
     background: linear-gradient(
