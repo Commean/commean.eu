@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav>
+    <nav class="navbar">
       <ul>
         <li><RouterLink to="/">HOME</RouterLink></li>
         <li><RouterLink to="/about">ABOUT</RouterLink></li>
@@ -79,7 +79,15 @@ import { RouterLink, RouterView } from "vue-router";
 import anime from "animejs/lib/anime.es.js";
 
 export default {
-  mounted() {},
+  mounted() {
+    anime({
+      targets: ".navbar",
+      easing: "easeOutExpo",
+      duration: 750,
+      translateY: [-250, 0],
+    });
+    
+  },
   methods: {},
 };
 </script>
