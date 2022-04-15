@@ -1,8 +1,10 @@
 <template>
   <header>
     <nav>
-      <RouterLink to="/">HOME</RouterLink>
-      <RouterLink to="/about">ABOUT</RouterLink>
+      <ul>
+        <li><RouterLink to="/">HOME</RouterLink></li>
+        <li><RouterLink to="/about">ABOUT</RouterLink></li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -11,37 +13,59 @@
 @import "/src/scss/_variables.scss";
 
 nav {
-  width: 100%;
+  padding: 20px 0;
+  background-color: var(--color-background-soft);
+  box-shadow: 0 2px 4px 0 black;
+  background: rgb(246, 174, 45);
+  background: linear-gradient(
+    45deg,
+    var(--color-gradient-1) 0%,
+    var(--color-gradient-2) 35%,
+    var(--color-gradient-3) 100%
+  );
+  color: var(--color-text-inverse);
 
-  a {
-    margin: 0 25px;
-    text-decoration: none;
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline-block;
 
-    &:before,
-    &:after {
-      position: absolute;
-      opacity: 0;
-      width: 0%;
-      height: 2px;
-      content: "";
-      background: var(--color-nav-background);
-      transition: all 0.3s;
-    }
+      a {
+        margin: 0 25px;
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--color-text-inverse);
 
-    &:before {
-      left: 0px;
-      top: 0px;
-    }
+        &:before,
+        &:after {
+          position: absolute;
+          opacity: 0;
+          width: 0%;
+          height: 2px;
+          content: "";
+          background: white;
+          transition: all 0.3s;
+        }
 
-    &:after {
-      right: 0px;
-      bottom: 0px;
-    }
+        &:before {
+          left: 0px;
+          top: 0px;
+        }
 
-    &:hover:before,
-    &:hover:after {
-      opacity: 1;
-      width: 100%;
+        &:after {
+          right: 0px;
+          bottom: 0px;
+        }
+
+        &:hover:before,
+        &:hover:after {
+          opacity: 1;
+          width: 100%;
+        }
+      }
     }
   }
 }
