@@ -10,4 +10,5 @@ import { RouterView } from "vue-router";
 
 <style>
 @import "@/assets/base.css";
+@import "@/assets/font.css";
 </style>
