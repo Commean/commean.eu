@@ -1,9 +1,9 @@
 <template>
   <section class="card">
     <div class="header">
-      <h2>
+      <h4>
         <slot name="heading"></slot>
-      </h2>
+      </h4>
       <div class="icon"><slot name="icon"></slot></div>
     </div>
     <div class="details">
@@ -40,7 +40,7 @@
     grid-template-areas: "headline icon";
     grid-template-columns: auto $icon-size;
 
-    h2 {
+    h4 {
       grid-area: headline;
       width: 100%;
       margin: auto;
