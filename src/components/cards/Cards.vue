@@ -13,16 +13,22 @@
     <FloatingCard>
       <template #heading>Local processing</template>
       <template #icon><img src="/src/assets/icons/memory_24dp.svg" /></template>
-
-      Commean is Open Source.
+      Every <a href="#TODO">node</a> processes all the data locally. This that
+      the video stream never enters the cloud or an external server.<br /><br />
+      The local processing of the video stream not only guarantees more privacy
+      for everyone, but it also allows low bandwidth connections such as LoRaWAN
+      (TheThingsNetwork).
     </FloatingCard>
     <FloatingCardWide>
-      <template #heading>Local processing</template>
+      <template #heading>Privacy</template>
       <template #icon
         ><img src="/src/assets/icons/security_24dp.svg"
       /></template>
-
-      Commean is Open Source.
+      Privacy is a major concern for us. It is important that a system is used,
+      which respects privacy. Other solutions may send a video stream to an
+      external server, which is a major problem. Commean doing all the
+      processing locally, which protects everyone's privacy. Only the measured
+      data, such as the amount of vehicles passed, is leaving each node.
     </FloatingCardWide>
   </div>
 </template>

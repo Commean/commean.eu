@@ -61,6 +61,7 @@
 
   .details {
     padding: 15px 25px;
+    margin: auto;
     grid-area: details;
   }
 }
