@@ -31,7 +31,7 @@
   --color-gradient-3: var(--vt-c-primary);
 
   --color-button: var(--vt-c-primary);
-  --color-button-border: var(--vt-c-black-mute);
+  --color-button-border: var(--vt-c-white-mute);
 
   --section-gap: 160px;
 }

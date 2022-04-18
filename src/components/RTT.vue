@@ -1,14 +1,18 @@
 <template>
   <button @click="returnToTop" id="rrt" ref="rrt" class="hidden">
     <svg
+      width="36"
+      height="36"
+      fill="#FFFFFF"
+      version="1.1"
+      viewBox="0 0 36 36"
       xmlns="http://www.w3.org/2000/svg"
-      height="24px"
-      viewBox="0 0 24 24"
-      width="24px"
-      fill="#000000"
     >
-      <path d="M0 0h24v24H0z" fill="none" />
-      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+      <path d="m5.756-0.7407h24v24h-24z" fill="none" />
+      <path
+        d="m4.173 28.69 13.58-13.55 13.58 13.55 4.173-4.173-17.76-17.76-17.76 17.76z"
+        stroke-width="2.959"
+      />
     </svg>
   </button>
 </template>
@@ -17,7 +21,7 @@
 @import "/src/scss/_variables.scss";
 
 .hidden {
-  display: none;
+  //display: none;
 }
 
 #rrt {
@@ -25,8 +29,8 @@
   right: 2rem;
   bottom: 2rem;
 
-  width: 40px;
-  height: 40px;
+  width: 64px;
+  height: 64px;
   background-color: var(--color-button);
   border-radius: 100%;
   border-style: solid;
@@ -36,6 +40,9 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+import anime from "animejs/lib/anime.es.js";
+
+let OFFSET = 100;
 
 // declare a ref to hold the element reference
 // the name must match template ref value
@@ -46,19 +53,47 @@ onMounted(() => {
     return document.documentElement || document.body;
   };
 
-  document.addEventListener("scroll", () => {
+  function onScroll() {
     if (scrollContainer().scrollTop > showOnPx) {
-      rrt.value?.classList.remove("hidden");
+      if (rrt.value?.classList.contains("hidden")) {
+        rrt.value?.classList.remove("hidden");
+        anime({
+          targets: "#rrt",
+          translateX: [OFFSET, 0],
+          rotate: [360, 0],
+          easing: "easeInSine",
+          duration: 500,
+        });
+      }
     } else {
-      rrt.value?.classList.add("hidden");
+      if (!rrt.value?.classList.contains("hidden")) {
+        rrt.value?.classList.add("hidden");
+        anime({
+          targets: "#rrt",
+          translateX: [0, OFFSET],
+          rotate: [0, 360],
+          easing: "easeInSine",
+          duration: 500,
+        });
+      }
     }
-  });
+  }
+
+  document.addEventListener("scroll", onScroll);
 });
 </script>
 
 <script lang="ts">
 const showOnPx = 64;
 export default {
+  mounted() {
+    anime({
+      targets: "#rrt",
+      translateX: 1000,
+      easing: "easeInSine",
+      duration: 0,
+    });
+  },
   methods: {
     returnToTop() {
       document.body.scrollIntoView({
