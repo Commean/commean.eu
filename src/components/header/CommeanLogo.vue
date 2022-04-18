@@ -52,6 +52,7 @@
   height: 128px;
   width: 100%;
   padding: 10px 20px;
+  margin: 30px 0;
 
   display: flex;
   justify-content: center;

@@ -15,10 +15,6 @@
   padding: 0px 10px;
   text-align: center;
   font-weight: normal;
-
-  @media (min-width: $switch-to-desktop-view) {
-    margin: 20px auto 0;
-  }
 }
 </style>
 
