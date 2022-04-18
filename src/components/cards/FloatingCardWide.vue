@@ -8,9 +8,13 @@
 </template>
 
 <style lang="scss" scoped>
+@import "/src/scss/_variables.scss";
+
 .card {
-  grid-column: 1 / span 2;
-  margin: auto 20%;
+  @media (min-width: $switch-to-desktop-view) {
+    grid-column: 1 / span 2;
+    margin: auto 20%;
+  }
 }
 </style>
 

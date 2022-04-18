@@ -5,8 +5,6 @@
 </template>
 
 <style lang="scss">
-@import "..//src/scss/_variables.scss";
-
 .subtitle h2 {
   margin: 0 auto;
   border: 2px solid;

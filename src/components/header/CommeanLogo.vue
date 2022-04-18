@@ -47,12 +47,17 @@
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+@import "/src/scss/_variables.scss";
+
 #commean-logo {
   height: 128px;
   width: 100%;
   padding: 10px 20px;
-  margin: 30px 0;
+
+  @media (min-width: $switch-to-desktop-view) {
+    margin: 30px 0;
+  }
 
   display: flex;
   justify-content: center;

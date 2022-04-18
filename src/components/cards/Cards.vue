@@ -33,14 +33,20 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import "/src/scss/_variables.scss";
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
   max-width: 1000px;
   margin: 50px auto;
   padding: 0 20px;
+
+  @media (min-width: $switch-to-desktop-view) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>
 

@@ -13,12 +13,19 @@
 </template>
 
 <style lang="scss">
+@import "/src/scss/_variables.scss";
+
 .card {
   display: inline-grid;
   background-color: var(--color-background-soft);
   box-shadow: 0 2px 4px 0 black;
   border-radius: 25px;
   overflow: hidden;
+  grid-column: 1;
+
+  @media (min-width: $switch-to-desktop-view) {
+    grid-column: auto;
+  }
 
   $margin-card: 10px;
   $icon-size: 64px;
