@@ -1,5 +1,5 @@
 <template>
-  <button @click="returnToTop" id="rrt" ref="rrt" class="hidden">
+  <button @click="returnToTop" id="rtt" ref="rtt" class="hidden">
     <svg
       width="36"
       height="36"
@@ -24,7 +24,7 @@
   //display: none;
 }
 
-#rrt {
+#rtt {
   position: fixed;
   right: 2rem;
   bottom: 2rem;
@@ -46,7 +46,7 @@ let OFFSET = 100;
 
 // declare a ref to hold the element reference
 // the name must match template ref value
-const rrt = ref<HTMLButtonElement | null>(null);
+const rtt = ref<HTMLButtonElement | null>(null);
 
 onMounted(() => {
   const scrollContainer = () => {
@@ -55,10 +55,10 @@ onMounted(() => {
 
   function onScroll() {
     if (scrollContainer().scrollTop > showOnPx) {
-      if (rrt.value?.classList.contains("hidden")) {
-        rrt.value?.classList.remove("hidden");
+      if (rtt.value?.classList.contains("hidden")) {
+        rtt.value?.classList.remove("hidden");
         anime({
-          targets: "#rrt",
+          targets: "#rtt",
           translateX: [OFFSET, 0],
           rotate: [360, 0],
           easing: "easeInSine",
@@ -66,10 +66,10 @@ onMounted(() => {
         });
       }
     } else {
-      if (!rrt.value?.classList.contains("hidden")) {
-        rrt.value?.classList.add("hidden");
+      if (!rtt.value?.classList.contains("hidden")) {
+        rtt.value?.classList.add("hidden");
         anime({
-          targets: "#rrt",
+          targets: "#rtt",
           translateX: [0, OFFSET],
           rotate: [0, 360],
           easing: "easeInSine",
@@ -88,7 +88,7 @@ const showOnPx = 64;
 export default {
   mounted() {
     anime({
-      targets: "#rrt",
+      targets: "#rtt",
       translateX: 1000,
       easing: "easeInSine",
       duration: 0,
