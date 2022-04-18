@@ -156,29 +156,17 @@
 </style>
 
 <script lang="ts">
-import anime from "animejs/lib/anime.es.js";
-
-const LOOP = {
-  duration: 15000,
-  factor: 2,
-};
+import animate from "./Animations.vue";
+var { LOOP, animeVehicle, animateMap } = animate();
 
 export default {
   mounted() {
     // Animate map loading
-    anime({
-      targets: ".background-map-line-drawing-map .background-map-lines path",
-      strokeDashoffset: [anime.setDashoffset, 0],
-      easing: "easeInSine",
-      duration: 5000,
-      delay: function (el, i) {
-        return i * 100;
-      },
-    });
+    animateMap();
 
     if (navigator.userAgent.match(/iPad|iPhone/i)) {
       // Animate cars
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-01",
         "#path-1",
         "linear",
@@ -186,7 +174,7 @@ export default {
         LOOP.factor * 800,
         LOOP.factor * 4200
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-02",
         "#path-1",
         "linear",
@@ -194,7 +182,7 @@ export default {
         LOOP.factor * 2300,
         LOOP.factor * 2700
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-03",
         "#path-2",
         "linear",
@@ -202,7 +190,7 @@ export default {
         LOOP.factor * 800,
         LOOP.factor * 2200
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-10",
         "#path-2",
         "linear",
@@ -210,7 +198,7 @@ export default {
         LOOP.factor * 0,
         LOOP.factor * 0
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-04",
         "#path-3",
         "linear",
@@ -218,7 +206,7 @@ export default {
         LOOP.factor * 1000,
         LOOP.factor * 500
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-05",
         "#path-3",
         "linear",
@@ -226,7 +214,7 @@ export default {
         LOOP.factor * 5000,
         LOOP.factor * 0
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-06",
         "#path-4",
         "linear",
@@ -234,7 +222,7 @@ export default {
         LOOP.factor * 5000,
         LOOP.factor * 0
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-11",
         "#path-4",
         "linear",
@@ -242,7 +230,7 @@ export default {
         LOOP.factor * 2000,
         LOOP.factor * 0
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-07",
         "#path-5",
         "linear",
@@ -250,7 +238,7 @@ export default {
         LOOP.factor * 5000,
         LOOP.factor * 0
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-12",
         "#path-5",
         "linear",
@@ -258,7 +246,7 @@ export default {
         LOOP.factor * 1000,
         LOOP.factor * 0
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-13",
         "#path-5",
         "linear",
@@ -266,7 +254,7 @@ export default {
         LOOP.factor * 1250,
         LOOP.factor * 0
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-14",
         "#path-5",
         "linear",
@@ -274,7 +262,7 @@ export default {
         LOOP.factor * 2000,
         LOOP.factor * 250
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-14",
         "#path-5",
         "linear",
@@ -282,7 +270,7 @@ export default {
         LOOP.factor * 2500,
         LOOP.factor * 250
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-08",
         "#path-6",
         "linear",
@@ -290,7 +278,7 @@ export default {
         LOOP.factor * 200,
         LOOP.factor * 0
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-15",
         "#path-6",
         "linear",
@@ -298,7 +286,7 @@ export default {
         LOOP.factor * 2000,
         LOOP.factor * 0
       );
-      this.animeVehicle(
+      animeVehicle(
         "#vehicle-09",
         "#path-7",
         "linear",
@@ -307,37 +295,6 @@ export default {
         LOOP.factor * 0
       );
     }
-  },
-  methods: {
-    animeVehicle(
-      vehicle: string,
-      path_name: string,
-      easing: any = "linear",
-      duration: number = LOOP.duration,
-      delay: number = 0,
-      endDelay: number = 0
-    ) {
-      if (duration + delay + endDelay != LOOP.duration) {
-        this.$log.info(
-          "BackgroundMap will run out of sync!",
-          vehicle,
-          path_name,
-          duration + delay + endDelay
-        );
-      }
-      var path: (a: string) => Number = anime.path(path_name);
-      anime({
-        targets: vehicle,
-        translateX: path("x"),
-        translateY: path("y"),
-        rotate: path("angle"),
-        easing: easing,
-        duration: duration,
-        delay: delay,
-        endDelay: endDelay,
-        loop: true,
-      });
-    },
   },
 };
 </script>
