@@ -1,6 +1,5 @@
 <template>
   <main>
-    <p @click="submit">Hi</p>
     <CommeanLogo />
     <Subtitle />
     <BackgroundMap />
@@ -18,14 +17,5 @@ import Subtitle from "./../components/header/Subtitle.vue";
 </script>
 
 <script lang="ts">
-export default {
-  mounted() {
-    console.log(`the component is now mounted.`);
-  },
-  methods: {
-    submit() {
-      console.log("Test");
-    },
-  },
-};
+export default {};
 </script>
