@@ -13,8 +13,8 @@
     <FloatingCard>
       <template #heading>Local processing</template>
       <template #icon><img src="/src/assets/icons/memory_24dp.svg" /></template>
-      Every <a href="#TODO">node</a> processes all the data locally. This that
-      the video stream never enters the cloud or an external server.<br /><br />
+      Every <a href="#TODO">node</a> processes all the data locally. This means
+      that the video stream never enters the cloud or an external server.<br /><br />
       The local processing of the video stream not only guarantees more privacy
       for everyone, but it also allows low bandwidth connections such as LoRaWAN
       (TheThingsNetwork).
