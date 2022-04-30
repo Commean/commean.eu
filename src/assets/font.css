@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoUltLtIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoUltLtIt.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoUltBlk.woff2') format('woff2'),
+        url('/font/trueno/TruenoUltBlk.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoUltLt.woff2') format('woff2'),
+        url('/font/trueno/TruenoUltLt.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoRg.woff2') format('woff2'),
+        url('/font/trueno/TruenoRg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoExBdIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoExBdIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoSBd.woff2') format('woff2'),
+        url('/font/trueno/TruenoSBd.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoRgIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoRgIt.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoUltBlkIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoUltBlkIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoBlkOl.woff2') format('woff2'),
+        url('/font/trueno/TruenoBlkOl.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoExBdOlIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoExBdOlIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoBlk.woff2') format('woff2'),
+        url('/font/trueno/TruenoBlk.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoBlkOlIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoBlkOlIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoBdOl.woff2') format('woff2'),
+        url('/font/trueno/TruenoBdOl.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoBdOlIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoBdOlIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoExBdOl.woff2') format('woff2'),
+        url('/font/trueno/TruenoExBdOl.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoExBd.woff2') format('woff2'),
+        url('/font/trueno/TruenoExBd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoLt.woff2') format('woff2'),
+        url('/font/trueno/TruenoLt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoBd.woff2') format('woff2'),
+        url('/font/trueno/TruenoBd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoBdIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoBdIt.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoBlkIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoBlkIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoSBdIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoSBdIt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trueno';
+    src: url('/font/trueno/TruenoLtIt.woff2') format('woff2'),
+        url('/font/trueno/TruenoLtIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
