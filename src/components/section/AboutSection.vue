@@ -1,6 +1,6 @@
 <template>
   <section class="grid-container">
-    <h1>Smart traffic analysis with AI</h1>
+    <h1><span class="keyword">Smart</span> traffic analysis with AI 🧠</h1>
     <p>
       Analyze the traffic (flow), collect statistics, detect bottlenecks and
       much more.
@@ -23,10 +23,14 @@ section {
   grid-template-columns: 550px auto;
 
   max-width: 1000px;
-  margin: 150px auto 50px;
+  margin: 75px auto;
 
   h1 {
     grid-area: header;
+    .keyword {
+        color: var(--color-text-emph);
+        font-weight: 900;
+    }
   }
 
   p {
