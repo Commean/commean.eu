@@ -42,7 +42,7 @@
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
   max-width: 1000px;
-  margin: 250px auto;
+  margin: 150px auto;
   padding: 0 20px;
 
   @media (min-width: $switch-to-desktop-view) {

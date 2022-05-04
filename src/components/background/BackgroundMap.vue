@@ -119,14 +119,15 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  z-index: -101;
-  background-color: var(--color-background-soft);
+  box-shadow: 0 2px 4px 0 black inset;
 
   @media (min-width: $switch-to-desktop-view) {
     width: 140%;
   }
 
   #background-map {
+    z-index: -101;
+    background-color: var(--color-background-soft);
     left: -20%;
     margin-top: -10%;
     padding: 10px 0;
