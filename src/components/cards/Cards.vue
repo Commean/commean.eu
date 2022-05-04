@@ -1,4 +1,5 @@
 <template>
+  <BackgroundMap />
   <div class="grid-container">
     <FloatingCard>
       <template #heading>Open Source</template>
@@ -41,7 +42,7 @@
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 250px auto;
   padding: 0 20px;
 
   @media (min-width: $switch-to-desktop-view) {
@@ -51,6 +52,7 @@
 </style>
 
 <script setup lang="ts">
+import BackgroundMap from "./../background/BackgroundMap.vue";
 import FloatingCard from "./FloatingCard.vue";
 import FloatingCardWide from "./FloatingCardWide.vue";
 </script>

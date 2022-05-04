@@ -23,7 +23,7 @@ section {
   grid-template-columns: 550px auto;
 
   max-width: 1000px;
-  margin: 150px auto 0;
+  margin: 150px auto 50px;
 
   h1 {
     grid-area: header;

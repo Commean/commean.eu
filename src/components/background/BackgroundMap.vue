@@ -115,11 +115,12 @@
 
 .background-map-line-drawing-map {
   position: absolute;
-  top: 80vh;
   width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  z-index: -101;
+  background-color: var(--color-background-soft);
 
   @media (min-width: $switch-to-desktop-view) {
     width: 140%;
