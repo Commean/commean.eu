@@ -46,7 +46,7 @@ nav {
           width: 0%;
           height: 2px;
           content: "";
-          background: white;
+          background: var(--color-text-inverse);
           transition: all 0.3s;
         }
 
