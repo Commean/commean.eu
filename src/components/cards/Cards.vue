@@ -33,7 +33,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "/src/scss/_variables.scss";
 
 .grid-container {

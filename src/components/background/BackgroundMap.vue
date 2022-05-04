@@ -115,6 +115,7 @@
 
 .background-map-line-drawing-map {
   position: absolute;
+  top: 80vh;
   width: 100%;
   overflow: hidden;
   display: flex;
