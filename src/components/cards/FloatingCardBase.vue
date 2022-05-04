@@ -62,6 +62,10 @@
         height: $icon-size;
         width: $icon-size;
         margin: 0 auto;
+
+        @media (prefers-color-scheme: dark) {
+          filter: invert(90%);
+        }
       }
     }
   }
