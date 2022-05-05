@@ -143,49 +143,81 @@
 <script>
 import anime from "animejs/lib/anime.es.js";
 
+let VEHICLE_X_START = 0;
+let VEHICLE_X_END = 50;
+let BORDER_Y_START = -30;
+let BORDER_Y_END = 0;
+
+let WAIT_BEGIN = 1500;
+
 export default {
   mounted() {
+    // Reset animation (needed after switching page)
     anime({
       targets: "#my_car_01",
-      translateX: [0, 50],
-      duration: 2500,
-      endDelay: 600,
-      easing: "easeOutQuad",
-      loop: true,
+      translateX: VEHICLE_X_START,
+      duration: 0,
     });
 
     anime({
       targets: "#my_car_01_border",
-      translateY: [
-        { value: -30, duration: 0, delay: 400 },
-        { value: 0, duration: 600 },
-        { value: 0, duration: 2100 },
-      ],
-      duration: 2500,
-      easing: "linear",
-      loop: true,
+      translateY: BORDER_Y_START,
+      duration: 0,
     });
 
     anime({
       targets: "#my_truck_01",
-      translateX: [0, 50],
-      duration: 2500,
-      delay: 600,
-      easing: "easeOutQuad",
-      loop: true,
+      translateX: VEHICLE_X_START,
+      duration: 0,
     });
 
     anime({
       targets: "#my_truck_01_border",
-      translateY: [
-        { value: -30, duration: 0, delay: 1000 },
-        { value: 0, duration: 600 },
-        { value: 0, duration: 1500 },
-      ],
-      duration: 2500,
-      easing: "linear",
-      loop: true,
+      translateY: BORDER_Y_START,
+      duration: 0,
     });
+
+    setTimeout(function () {
+      anime({
+        targets: "#my_car_01",
+        translateX: [VEHICLE_X_START, VEHICLE_X_END],
+        duration: 2500,
+        endDelay: 600,
+        easing: "easeOutQuad",
+        loop: true,
+      });
+
+      anime({
+        targets: "#my_car_01_border",
+        translateY: [
+          { value: BORDER_Y_START, duration: 0, delay: 400 },
+          { value: BORDER_Y_END, duration: 600 },
+          { value: BORDER_Y_END, duration: 2100 },
+        ],
+        easing: "linear",
+        loop: true,
+      });
+
+      anime({
+        targets: "#my_truck_01",
+        translateX: [VEHICLE_X_START, VEHICLE_X_END],
+        duration: 2500,
+        delay: 600,
+        easing: "easeOutQuad",
+        loop: true,
+      });
+
+      anime({
+        targets: "#my_truck_01_border",
+        translateY: [
+          { value: BORDER_Y_START, duration: 0, delay: 1000 },
+          { value: BORDER_Y_END, duration: 600 },
+          { value: BORDER_Y_END, duration: 1500 },
+        ],
+        easing: "linear",
+        loop: true,
+      });
+    }, WAIT_BEGIN);
   },
 };
 </script>
