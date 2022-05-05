@@ -2,7 +2,7 @@
     <h1>WIP</h1>
 </template>
 
-<style>
+<style lang="scss" scoped>
 h1 {
   text-align: center;
 }
