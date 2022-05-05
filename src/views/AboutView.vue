@@ -1,6 +1,10 @@
 <template>
-    <h1>WIP</h1>
+  <FHCarinthia />
 </template>
+
+<script setup lang="ts">
+import FHCarinthia from "./../components/section/FHCarinthia.vue";
+</script>
 
 <style lang="scss" scoped>
 h1 {
