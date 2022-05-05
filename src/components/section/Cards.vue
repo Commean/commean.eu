@@ -61,8 +61,8 @@ section {
 
 <script setup lang="ts">
 import BackgroundMap from "./../background/BackgroundMap.vue";
-import FloatingCard from "./FloatingCard.vue";
-import FloatingCardWide from "./FloatingCardWide.vue";
+import FloatingCard from "./../cards/FloatingCard.vue";
+import FloatingCardWide from "./../cards/FloatingCardWide.vue";
 </script>
 
 <script lang="ts">
