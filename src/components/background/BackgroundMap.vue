@@ -164,10 +164,10 @@ var { LOOP, animeVehicle, animateMap } = animate();
 
 export default {
   mounted() {
-    // Animate map loading
-    animateMap();
-
     if (navigator.userAgent.match(/iPad|iPhone/i)) {
+      // Animate map loading
+      animateMap();
+
       // Animate cars
       animeVehicle(
         "#vehicle-01",
