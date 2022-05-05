@@ -35,14 +35,30 @@ export default {};
 
 section {
   display: grid;
-  grid-template-areas: "image title" "image details";
+
   max-width: 1500px;
   margin: 0 auto;
 
+  @media (max-width: $switch-to-desktop-view) {
+    grid-template-columns: 90%;
+    grid-template-areas: "title" "image" "details";
+    justify-content: center;
+    grid-gap: 20px;
+  }
+
+  @media (min-width: $switch-to-desktop-view) {
+    grid-template-columns: 600px auto;
+    grid-template-areas: "image title" "image details";
+  }
+
   .text-bottom {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: flex-end;
+
+    @media (min-width: $switch-to-desktop-view) {
+      justify-content: left;
+    }
 
     h2 {
       grid-area: title;
@@ -55,8 +71,12 @@ section {
 
   img {
     grid-area: image;
-    height: 400px;
-    clip-path: polygon(0 0, 0 100%, 75% 100%, 100% 0);
+    max-width: 100%;
+    clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
+
+    @media (min-width: $switch-to-desktop-view) {
+      clip-path: polygon(0 0, 0 100%, 75% 100%, 100% 0);
+    }
   }
 }
 </style>
