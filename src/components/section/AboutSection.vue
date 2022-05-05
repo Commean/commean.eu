@@ -20,7 +20,7 @@ section {
 
   grid-template-areas: "header" "text" "animation";
 
-  @media (min-width: $switch-to-desktop-view) {
+  @media (min-width: 1000px) {
     grid-template-columns: 550px auto;
     grid-template-areas: "header animation" "text animation";
     margin: 0 auto;
