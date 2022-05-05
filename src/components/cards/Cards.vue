@@ -48,7 +48,7 @@ section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
-    max-width: 1000px;
+    max-width: $max-width;
     margin: 50px auto;
     padding: 0 20px;
 

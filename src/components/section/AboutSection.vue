@@ -12,7 +12,6 @@
 </template>
 
 <style lang="scss" scoped>
-@namespace xlink "http://www.w3.org/1999/xlink";
 @import "/src/scss/_variables.scss";
 
 section {
@@ -26,7 +25,7 @@ section {
     margin: 0 auto;
   }
 
-  max-width: 1000px;
+  max-width: $max-width;
   padding: 50px 20px;
 
   h1 {

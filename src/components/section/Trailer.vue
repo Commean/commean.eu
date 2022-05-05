@@ -20,8 +20,10 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "/src/scss/_variables.scss";
+
 section {
-  max-width: 1000px;
+  max-width: $max-width;
   padding: 50px 20px;
   margin: 0 auto;
 
