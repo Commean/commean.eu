@@ -28,5 +28,13 @@ footer {
   p {
     margin: 0;
   }
+
+  a {
+    img {
+      @media (prefers-color-scheme: dark) {
+        filter: invert(90%);
+      }
+    }
+  }
 }
 </style>
