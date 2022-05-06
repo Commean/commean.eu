@@ -1,0 +1,101 @@
+@import "/src/scss/_variables.scss";
+
+@mixin card-base($icon-size: 64px, $margin-card: 10px) {
+  display: inline-grid;
+  background-color: var(--color-background-soft);
+  box-shadow: 0 2px 4px 0 black;
+  border-radius: 25px;
+  overflow: hidden;
+  grid-column: 1;
+
+  @media (min-width: $switch-to-desktop-view) {
+    grid-column: auto;
+  }
+
+  grid-template-areas: "header" "details";
+  grid-template-rows: calc($icon-size + 2 * $margin-card) auto;
+
+  .header {
+    grid-area: header;
+    display: inline-grid;
+    background: rgb(246, 174, 45);
+    background: linear-gradient(
+      45deg,
+      var(--color-gradient-1) 0%,
+      var(--color-gradient-2) 35%,
+      var(--color-gradient-3) 100%
+    );
+    color: var(--color-text-inverse);
+    padding: 0 25px;
+    grid-template-areas: "headline icon";
+    grid-template-columns: auto $icon-size;
+
+    h4 {
+      grid-area: headline;
+      width: 100%;
+      margin: auto;
+    }
+
+    .icon {
+      grid-area: icon;
+      height: $icon-size;
+      margin: $margin-card 0;
+
+      img {
+        height: $icon-size;
+        width: $icon-size;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .details {
+    padding: 15px 25px;
+    margin: auto;
+    grid-area: details;
+  }
+}
+
+.card {
+  @include card-base();
+
+  .header {
+    .icon {
+      img {
+        @media (prefers-color-scheme: dark) {
+          filter: invert(90%);
+        }
+      }
+    }
+  }
+}
+
+.card-member {
+  $icon-size: 200px;
+  $border-size: 5px;
+  $polygon: polygon(10% 0, 0 20%, 0 100%, 90% 100%, 100% 80%, 100% 0);
+
+  @include card-base($icon-size);
+
+  width: 500px;
+
+  .header {
+    .icon {
+      display: inline-block;
+      position: relative;
+      background: var(--color-background-soft);
+      box-sizing: border-box;
+
+      clip-path: $polygon;
+      img {
+        position: absolute;
+        top: $border-size; /* equal to border thickness */
+        left: $border-size; /* equal to border thickness */
+        width: $icon-size - 2 * $border-size; /* container height - (border thickness * 2) */
+        height: $icon-size - 2 * $border-size; /* container height - (border thickness * 2) */
+
+        clip-path: $polygon;
+      }
+    }
+  }
+}
