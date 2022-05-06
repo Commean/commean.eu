@@ -78,7 +78,10 @@
 
   @include card-base($icon-size);
 
+  display: grid;
   width: 500px;
+  height: 300px;
+  margin: 10px;
   grid-template-rows: $icon-size * 2 / 3 auto;
   grid-template-areas: "header" "contact" "details";
 

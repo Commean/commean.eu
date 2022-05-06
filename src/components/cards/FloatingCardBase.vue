@@ -1,5 +1,5 @@
 <template>
-  <section class="card">
+  <div class="card">
     <div class="header">
       <h4>
         <slot name="heading"></slot>
@@ -9,7 +9,7 @@
     <div class="details">
       <slot></slot>
     </div>
-  </section>
+  </div>
 </template>
 
 <style lang="scss" scoped>

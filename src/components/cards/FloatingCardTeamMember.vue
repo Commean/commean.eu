@@ -1,5 +1,5 @@
 <template>
-  <section class="card-member">
+  <div class="card-member">
     <div class="header">
       <h4>
         <slot name="heading"></slot>
@@ -8,7 +8,7 @@
     <div class="icon"><slot name="icon"></slot></div>
     <div class="contact icon-auto-theme icon-with-link"><slot name="contact"></slot></div>
     <div class="details"><slot></slot></div>
-  </section>
+  </div>
 </template>
 
 <script lang="ts">
