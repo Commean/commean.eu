@@ -83,7 +83,7 @@
   width: 500px;
   height: 300px;
   margin: 10px;
-  grid-template-rows: $icon-size * 2 / 3 auto;
+  grid-template-rows: calc($icon-size * 2 / 3);
   grid-template-areas: "header" "contact" "details";
 
   @media (max-width: $switch-to-mobile) {
