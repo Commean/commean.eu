@@ -1,0 +1,149 @@
+@import "/src/scss/_variables.scss";
+
+@mixin card-base($icon-size: 64px, $margin-card: 10px) {
+  display: inline-grid;
+  background-color: var(--color-background-soft);
+  box-shadow: 0 2px 4px 0 black;
+  border-radius: 25px;
+  overflow: hidden;
+  grid-column: 1;
+
+  @media (min-width: $switch-to-desktop-view) {
+    grid-column: auto;
+  }
+
+  grid-template-areas: "header" "details";
+  grid-template-rows: calc($icon-size + 2 * $margin-card) auto;
+
+  .header {
+    grid-area: header;
+    display: inline-grid;
+    background: rgb(246, 174, 45);
+    background: linear-gradient(
+      45deg,
+      var(--color-gradient-1) 0%,
+      var(--color-gradient-2) 35%,
+      var(--color-gradient-3) 100%
+    );
+    color: var(--color-text-inverse);
+    padding: 0 25px;
+    grid-template-areas: "headline icon";
+    grid-template-columns: auto $icon-size;
+
+    h4 {
+      grid-area: headline;
+      width: 100%;
+      margin: auto;
+    }
+
+    .icon {
+      grid-area: icon;
+      height: $icon-size;
+      margin: $margin-card 0;
+
+      img {
+        height: $icon-size;
+        width: $icon-size;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .details {
+    padding: 15px 25px;
+    margin: auto;
+    grid-area: details;
+  }
+}
+
+.card {
+  @include card-base();
+
+  .header {
+    .icon {
+      img {
+        @media (prefers-color-scheme: dark) {
+          filter: invert(90%);
+        }
+      }
+    }
+  }
+}
+
+.card-member {
+  $icon-size: 160px;
+  $border-size: 5px;
+  $inset: 20px;
+  $polygon: polygon(10% 0, 0 20%, 0 100%, 90% 100%, 100% 80%, 100% 0);
+  $switch-to-mobile: 560px;
+
+  @include card-base($icon-size);
+
+  display: grid;
+  width: 500px;
+  height: 300px;
+  margin: 10px;
+  grid-template-rows: $icon-size * 2 / 3 auto;
+  grid-template-areas: "header" "contact" "details";
+
+  @media (max-width: $switch-to-mobile) {
+    width: 100%;
+    height: auto;
+    grid-template-areas: "header" "icon" "contact" "details";
+
+    .header {
+      grid-template-areas: "headline headline";
+
+      h4 {
+        text-align: center;
+      }
+    }
+  }
+
+  .contact {
+    grid-area: contact;
+    width: 320px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: $switch-to-mobile) {
+      width: auto;
+    }
+  }
+
+  .details {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .icon {
+    position: absolute;
+    right: $inset;
+    top: $inset;
+    background: var(--color-background-mute);
+    box-sizing: border-box;
+    width: $icon-size;
+    height: $icon-size;
+    clip-path: $polygon;
+
+    @media (max-width: $switch-to-mobile) {
+      position: relative;
+      grid-area: icon;
+
+      margin: 0 auto 20px;
+      left: 0;
+    }
+
+    img {
+      position: absolute;
+      top: $border-size; /* equal to border thickness */
+      left: $border-size; /* equal to border thickness */
+      width: $icon-size - 2 * $border-size; /* container height - (border thickness * 2) */
+      height: $icon-size - 2 * $border-size; /* container height - (border thickness * 2) */
+
+      clip-path: $polygon;
+    }
+  }
+}

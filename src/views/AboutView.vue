@@ -1,8 +1,16 @@
 <template>
-    <h1>WIP</h1>
+  <Team />
+  <FHCarinthia />
+  <Contributors />
 </template>
 
-<style>
+<script setup lang="ts">
+import Contributors from "./../components/section/Contributors.vue";
+import FHCarinthia from "./../components/section/FHCarinthia.vue";
+import Team from "./../components/section/Team.vue";
+</script>
+
+<style lang="scss" scoped>
 h1 {
   text-align: center;
 }

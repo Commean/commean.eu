@@ -2,18 +2,20 @@
   <main>
     <CommeanLogo />
     <Subtitle />
-    <BackgroundMap />
+    <AboutSection />
     <Cards />
+    <Trailer />
   </main>
 </template>
 
 <style></style>
 
 <script setup lang="ts">
-import BackgroundMap from "./../components/background/BackgroundMap.vue";
-import Cards from "./../components/cards/Cards.vue";
+import AboutSection from "./../components/section/AboutSection.vue";
+import Cards from "./../components/section/Cards.vue";
 import CommeanLogo from "./../components/header/CommeanLogo.vue";
 import Subtitle from "./../components/header/Subtitle.vue";
+import Trailer from "./../components/section/Trailer.vue";
 </script>
 
 <script lang="ts">

@@ -1,0 +1,14 @@
+.icon-auto-theme {
+  @media (prefers-color-scheme: dark) {
+    img {
+      filter: invert(90%);
+    }
+  }
+}
+
+.icon-with-link {
+  img {
+    width: 32px;
+    margin: 8px;
+  }
+}

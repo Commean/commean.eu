@@ -119,12 +119,15 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
+  box-shadow: 0 2px 4px 0 black inset;
 
   @media (min-width: $switch-to-desktop-view) {
     width: 140%;
   }
 
   #background-map {
+    z-index: -101;
+    background-color: var(--color-background-soft);
     left: -20%;
     margin-top: -10%;
     padding: 10px 0;
@@ -161,10 +164,10 @@ var { LOOP, animeVehicle, animateMap } = animate();
 
 export default {
   mounted() {
-    // Animate map loading
-    animateMap();
-
     if (navigator.userAgent.match(/iPad|iPhone/i)) {
+      // Animate map loading
+      animateMap();
+
       // Animate cars
       animeVehicle(
         "#vehicle-01",

@@ -15,7 +15,6 @@
 nav {
   padding: 20px 0;
   background-color: var(--color-background-soft);
-  box-shadow: 0 2px 4px 0 black;
   background: rgb(246, 174, 45);
   background: linear-gradient(
     45deg,
@@ -46,7 +45,7 @@ nav {
           width: 0%;
           height: 2px;
           content: "";
-          background: white;
+          background: var(--color-text-inverse);
           transition: all 0.3s;
         }
 
