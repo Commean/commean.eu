@@ -75,6 +75,7 @@
   $border-size: 5px;
   $inset: 20px;
   $polygon: polygon(10% 0, 0 20%, 0 100%, 90% 100%, 100% 80%, 100% 0);
+  $switch-to-mobile: 560px;
 
   @include card-base($icon-size);
 
@@ -85,12 +86,30 @@
   grid-template-rows: $icon-size * 2 / 3 auto;
   grid-template-areas: "header" "contact" "details";
 
+  @media (max-width: $switch-to-mobile) {
+    width: 100%;
+    height: auto;
+    grid-template-areas: "header" "icon" "contact" "details";
+
+    .header {
+      grid-template-areas: "headline headline";
+
+      h4 {
+        text-align: center;
+      }
+    }
+  }
+
   .contact {
     grid-area: contact;
     width: 320px;
     margin: 10px 0;
     display: flex;
     justify-content: center;
+
+    @media (max-width: $switch-to-mobile) {
+      width: auto;
+    }
   }
 
   .details {
@@ -107,8 +126,16 @@
     box-sizing: border-box;
     width: $icon-size;
     height: $icon-size;
-
     clip-path: $polygon;
+
+    @media (max-width: $switch-to-mobile) {
+      position: relative;
+      grid-area: icon;
+
+      margin: 0 auto 20px;
+      left: 0;
+    }
+
     img {
       position: absolute;
       top: $border-size; /* equal to border thickness */
