@@ -4,11 +4,10 @@
       <h4>
         <slot name="heading"></slot>
       </h4>
-      <div class="icon"><slot name="icon"></slot></div>
     </div>
-    <div class="details">
-      <slot></slot>
-    </div>
+    <div class="icon"><slot name="icon"></slot></div>
+    <div class="contact icon-auto-theme icon-with-link"><slot name="contact"></slot></div>
+    <div class="details"><slot></slot></div>
   </section>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <hr />
-  <footer>
+  <footer class="icon-auto-theme icon-with-link">
     <p>©️ Commean 2022</p>
     <a href="https://gitlab.com/commean"
       ><img src="/src/assets/icons/gitlab.svg"
@@ -27,14 +27,6 @@ footer {
 
   p {
     margin: 0;
-  }
-
-  a {
-    img {
-      @media (prefers-color-scheme: dark) {
-        filter: invert(90%);
-      }
-    }
   }
 }
 </style>

@@ -71,31 +71,49 @@
 }
 
 .card-member {
-  $icon-size: 200px;
+  $icon-size: 160px;
   $border-size: 5px;
+  $inset: 20px;
   $polygon: polygon(10% 0, 0 20%, 0 100%, 90% 100%, 100% 80%, 100% 0);
 
   @include card-base($icon-size);
 
   width: 500px;
+  grid-template-rows: $icon-size * 2 / 3 auto;
+  grid-template-areas: "header" "contact" "details";
 
-  .header {
-    .icon {
-      display: inline-block;
-      position: relative;
-      background: var(--color-background-soft);
-      box-sizing: border-box;
+  .contact {
+    grid-area: contact;
+    width: 320px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .details {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .icon {
+    position: absolute;
+    right: $inset;
+    top: $inset;
+    background: var(--color-background-mute);
+    box-sizing: border-box;
+    width: $icon-size;
+    height: $icon-size;
+
+    clip-path: $polygon;
+    img {
+      position: absolute;
+      top: $border-size; /* equal to border thickness */
+      left: $border-size; /* equal to border thickness */
+      width: $icon-size - 2 * $border-size; /* container height - (border thickness * 2) */
+      height: $icon-size - 2 * $border-size; /* container height - (border thickness * 2) */
 
       clip-path: $polygon;
-      img {
-        position: absolute;
-        top: $border-size; /* equal to border thickness */
-        left: $border-size; /* equal to border thickness */
-        width: $icon-size - 2 * $border-size; /* container height - (border thickness * 2) */
-        height: $icon-size - 2 * $border-size; /* container height - (border thickness * 2) */
-
-        clip-path: $polygon;
-      }
     }
   }
 }

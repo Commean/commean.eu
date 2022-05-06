@@ -4,7 +4,7 @@
       <h4>
         <slot name="heading"></slot>
       </h4>
-      <div class="icon"><slot name="icon"></slot></div>
+      <div class="icon icon-auto-theme"><slot name="icon"></slot></div>
     </div>
     <div class="details">
       <slot></slot>
@@ -24,10 +24,6 @@
         height: 64px;
         width: 64px;
         margin: 0 auto;
-
-        @media (prefers-color-scheme: dark) {
-          filter: invert(90%);
-        }
       }
     }
   }

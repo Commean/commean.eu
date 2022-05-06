@@ -12,7 +12,8 @@ import { RouterView } from "vue-router";
   <RTT />
 </template>
 
-<style>
+<style lang="scss">
 @import "@/assets/base.css";
 @import "@/assets/font.css";
+@import "@/assets/icons/icon.scss";
 </style>
