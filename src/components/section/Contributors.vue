@@ -7,7 +7,7 @@
         <template #heading>Simon Reichmann</template>
         <template #icon
           ><img
-            src="/src/assets/icons/unknown.svg"
+            src="https://gitlab.com/commean/other/big-files/images-01/-/raw/main/contributors/simon_reichmann.jpg"
         /></template>
         <template #contact>
           <a href="mailto:simon@reichmann.or.at"
