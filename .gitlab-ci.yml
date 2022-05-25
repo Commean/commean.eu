@@ -1,0 +1,21 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+variables:
+  IMAGE_NAME: commean/commean.eu
+  DOCKER_USERNAME: $DOCKER_USERNAME
+  DOCKER_PASSWORD: $DOCKER_PASSWORD
+
+build:
+  stage: build
+  script:
+    - docker build -t "${IMAGE_NAME}:$(git describe)" .
+
+publish:
+  stage: publish
+  script:
+    - docker build -t "${IMAGE_NAME}:$(git describe)" .
+    - docker login --username "${DOCKER_USERNAME}" --password "${DOCKER_PASSWORD}"
+    - docker push "${IMAGE_NAME}:$(git describe)"
