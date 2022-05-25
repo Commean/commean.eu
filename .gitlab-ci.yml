@@ -12,12 +12,14 @@ build:
   stage: build
   script:
     - docker build .
+  except:
+  - tags
 
 deploy:
   stage: deploy
   script:
-    - docker build -t "${IMAGE_NAME}:${CI_COMMIT_TAG}" .
     - docker login --username "${DOCKER_USERNAME}" --password "${DOCKER_PASSWORD}"
+    - docker build -t "${IMAGE_NAME}:${CI_COMMIT_TAG}" .
     - docker push "${IMAGE_NAME}:${CI_COMMIT_TAG}"
   only:
     - tags
