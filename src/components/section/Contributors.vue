@@ -33,8 +33,8 @@ export default {};
 
 <style lang="scss" scoped>
 @import "/src/scss/_variables.scss";
+@import "scss/base.scss";
 
-h1,
 p {
   text-align: center;
 }
