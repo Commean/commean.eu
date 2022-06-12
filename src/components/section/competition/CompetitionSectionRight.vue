@@ -1,5 +1,5 @@
 <template>
-  <section class="competition-left">
+  <section class="competition-right">
     <div class="text-bottom">
       <h2><slot name="title"></slot></h2>
     </div>

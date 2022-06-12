@@ -1,0 +1,79 @@
+@import "/src/scss/_variables.scss";
+
+@mixin competition-base() {
+  display: grid;
+
+  max-width: 1500px;
+  margin: 0 auto;
+
+  @media (max-width: $switch-to-desktop-view) {
+    grid-template-columns: 90%;
+    grid-template-areas: "title" "image" "details";
+    justify-content: center;
+    grid-gap: 20px;
+  }
+
+  .text, .text-bottom {
+    @media (min-width: $switch-to-desktop-view) {
+      text-align: center;
+    }
+  }
+
+  .text-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    h2 {
+      grid-area: title;
+      margin-bottom: 0;
+    }
+  }
+
+  .text {
+    grid-area: details;
+  }
+
+  img {
+    grid-area: image;
+    max-width: 100%;
+    clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
+  }
+}
+
+.competition-left {
+  @include competition-base();
+
+  @media (min-width: $switch-to-desktop-view) {
+    grid-template-columns: 600px auto;
+  }
+
+  @media (min-width: $switch-to-desktop-view) {
+    grid-template-areas: "image title" "image details";
+  }
+
+  img {
+    @media (min-width: $switch-to-desktop-view) {
+      clip-path: polygon(0 0, 0 100%, 75% 100%, 100% 0);
+    }
+  }
+}
+
+
+.competition-right {
+  @include competition-base();
+
+  @media (min-width: $switch-to-desktop-view) {
+    grid-template-columns: auto 600px;
+  }
+
+  @media (min-width: $switch-to-desktop-view) {
+    grid-template-areas: "title image" "details image";
+  }
+
+  img {
+    @media (min-width: $switch-to-desktop-view) {
+      clip-path: polygon(25% 0, 0 100%, 100% 100%, 100% 0);
+    }
+  }
+}
