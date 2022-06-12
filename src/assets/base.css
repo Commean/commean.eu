@@ -34,6 +34,8 @@
   --color-button: var(--vt-c-primary);
   --color-button-border: var(--vt-c-white-mute);
 
+  --color-blockquote: var(--vt-c-primary);
+
   --section-gap: 160px;
 }
 
