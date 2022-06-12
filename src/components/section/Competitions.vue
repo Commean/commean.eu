@@ -17,8 +17,5 @@ export default {};
 
 <style lang="scss" scoped>
 @import "/src/scss/_variables.scss";
-
-h1 {
-  text-align: center;
-}
+@import "scss/base.scss";
 </style>

@@ -63,10 +63,8 @@ export default {};
 
 <style lang="scss" scoped>
 @import "/src/scss/_variables.scss";
+@import "scss/base.scss";
 
-h1{
-  text-align: center;
-}
 .team-flex {
   display: flex;
   flex-wrap: wrap;
