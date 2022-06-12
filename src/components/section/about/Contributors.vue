@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import FloatingCardTeamMember from "./../cards/FloatingCardTeamMember.vue";
+import FloatingCardTeamMember from "/src/components/cards/FloatingCardTeamMember.vue";
 </script>
 
 <script lang="ts">

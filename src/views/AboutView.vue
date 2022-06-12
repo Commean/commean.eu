@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import Contributors from "./../components/section/Contributors.vue";
-import Competitions from "./../components/section/Competitions.vue";
-import Team from "./../components/section/Team.vue";
+import Contributors from "./../components/section/about/Contributors.vue";
+import Competitions from "./../components/section/about/Competitions.vue";
+import Team from "./../components/section/about/Team.vue";
 </script>
 
 <style lang="scss" scoped>

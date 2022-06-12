@@ -60,9 +60,9 @@ section {
 </style>
 
 <script setup lang="ts">
-import BackgroundMap from "./../background/BackgroundMap.vue";
-import FloatingCard from "./../cards/FloatingCard.vue";
-import FloatingCardWide from "./../cards/FloatingCardWide.vue";
+import BackgroundMap from "/src/components/background/BackgroundMap.vue";
+import FloatingCard from "/src/components/cards/FloatingCard.vue";
+import FloatingCardWide from "/src/components/cards/FloatingCardWide.vue";
 </script>
 
 <script lang="ts">
