@@ -8,6 +8,9 @@
     <a href="https://github.com/commean"
       ><img src="/src/assets/icons/github.svg"
     /></a>
+    <a href="mailto:contact@commean.eu"
+      ><img src="/src/assets/icons/email.svg"
+    /></a>
   </footer>
 </template>
 
