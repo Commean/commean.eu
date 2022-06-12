@@ -1,14 +1,12 @@
 <template>
   <Team />
-  <FHCarinthia />
-  <Bosch />
+  <Competitions />
   <Contributors />
 </template>
 
 <script setup lang="ts">
 import Contributors from "./../components/section/Contributors.vue";
-import Bosch from "./../components/section/Bosch.vue";
-import FHCarinthia from "./../components/section/FHCarinthia.vue";
+import Competitions from "./../components/section/Competitions.vue";
 import Team from "./../components/section/Team.vue";
 </script>
 
