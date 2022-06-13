@@ -23,7 +23,7 @@ export default defineComponent({
     };
   },
   setup(props) {
-    const quote = reactive({ text: props.german_quote });
+    const quote = reactive({ text: props.english_quote });
 
     return {
       quote,
