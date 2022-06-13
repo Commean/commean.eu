@@ -52,7 +52,7 @@ section {
 </style>
 
 <script setup lang="ts">
-import ScanCars from "./../animation/ScanCars.vue";
+import ScanCars from "/src/components/animation/ScanCars.vue";
 </script>
 
 <script lang="ts">
