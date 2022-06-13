@@ -1,7 +1,12 @@
 <template>
   <section>
     <h1>Quotes</h1>
-    <Blockquote></Blockquote>
+    <Blockquote
+      german_quote="Mit innovativen Algorithmen und entsprechender Sensorik kann Commean verschiedenste Fahrzeugkategorien erkennen, selbst LKW-Anhänger von dicht aneinander folgenden Fahrzeugen unterscheiden. Diese verlässliche Auswertung kann dazu dienen, die Verkehrsströme zielgerichtet zu lenken bzw. zu verbessern. Die vielseitige und anspruchsvolle Aufgabe wurde von nur zwei Schülern fächerübergreifend auf ansehnlichem Niveau gelöst."
+    english_quote="TODO"
+    >
+      <template #author>Jury - Bosch Technik fürs Leben-Preis 2022</template>
+    </Blockquote>
   </section>
 </template>
 

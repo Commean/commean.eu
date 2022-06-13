@@ -1,17 +1,43 @@
 <template>
   <blockquote class="otro-blockquote">
-    Mit innovativen Algorithmen und entsprechender Sensorik kann Commean
-    verschiedenste Fahrzeugkategorien erkennen, selbst LKW-Anhänger von dicht
-    aneinander folgenden Fahrzeugen unterscheiden. Diese verlässliche Auswertung
-    kann dazu dienen, die Verkehrsströme zielgerichtet zu lenken bzw. zu
-    verbessern. Die vielseitige und anspruchsvolle Aufgabe wurde von nur zwei
-    Schülern fächerübergreifend auf ansehnlichem Niveau gelöst
-    <span>Jury - Bosch Technik fürs Leben-Preis 2022</span>
+    {{ quote.text }}
+    <span class="quote-author"><slot name="author"></slot></span>
+    <div class="language-switcher">
+      <a @click="switchToGerman">GER</a>/<a @click="switchToEnglish">ENG</a>
+    </div>
   </blockquote>
 </template>
 
-<script>
-export default {};
+<script lang="ts">
+import { defineComponent, reactive } from "vue";
+
+export default defineComponent({
+  props: {
+    german_quote: { type: String, required: true },
+    english_quote: { type: String, required: true },
+  },
+  data(props) {
+    return {
+      german_quote: props.german_quote,
+      english_quote: props.english_quote,
+    };
+  },
+  setup(props) {
+    const quote = reactive({ text: props.german_quote });
+
+    return {
+      quote,
+    };
+  },
+  methods: {
+    switchToGerman() {
+      this.quote.text = this.german_quote;
+    },
+    switchToEnglish() {
+      this.quote.text = this.english_quote;
+    },
+  },
+});
 </script>
 
 <style lang="scss" scoped>
@@ -19,7 +45,7 @@ export default {};
 
 .otro-blockquote {
   font-size: 1.4em;
-  width: 60%;
+  max-width: 1300px;
   margin: 50px auto;
   font-style: italic;
   padding: 1.2em 30px 1.2em 75px;
@@ -27,23 +53,63 @@ export default {};
   line-height: 1.6;
   position: relative;
   background-color: var(--color-background-soft);
+
+  &::before {
+    font-family: Arial;
+    content: "\201C";
+    color: var(--color-blockquote);
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+
+  .quote-author {
+    display: block;
+    color: var(--color-text-emph);
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+  }
 }
 
-.otro-blockquote::before {
-  font-family: Arial;
-  content: "\201C";
-  color: var(--color-blockquote);
-  font-size: 4em;
+.language-switcher {
+  writing-mode: vertical-rl;
   position: absolute;
+  background: none;
   left: 10px;
-  top: -10px;
-}
+  bottom: 18px;
+  border: none;
+  margin: 4px 2px;
 
-.otro-blockquote span {
-  display: block;
-  color: var(--color-text-emph);
-  font-style: normal;
-  font-weight: bold;
-  margin-top: 1em;
+  a {
+    color: var(--color-blockquote);
+    &:before,
+    &:after {
+      position: absolute;
+      opacity: 0;
+      width: 2px;
+      height: 0;
+      content: "";
+      background: var(--color-blockquote);
+      transition: all 0.3s;
+    }
+
+    &:before {
+      left: 0px;
+      top: 0px;
+    }
+
+    &:after {
+      right: 0px;
+      bottom: 0px;
+    }
+
+    &:hover:before,
+    &:hover:after {
+      opacity: 1;
+      height: 100%;
+    }
+  }
 }
 </style>
