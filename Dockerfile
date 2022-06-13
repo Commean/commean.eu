@@ -7,8 +7,8 @@ ARG BUILD_PATH
 
 WORKDIR ${BUILD_PATH}
 RUN apk add git
-RUN git clone https://gitlab.com/commean/other/commean.eu.git ${BUILD_PATH}
-#COPY . ${BUILD_PATH}
+#RUN git clone https://gitlab.com/commean/other/commean.eu.git ${BUILD_PATH}
+COPY . ${BUILD_PATH}
 
 RUN npm install
 RUN npm run build

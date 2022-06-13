@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import CompetitionSectionLeft from "/src/components/competition/CompetitionSectionLeft.vue";
+import CompetitionSectionLeft from "../../competition/CompetitionSectionLeft.vue";
 </script>
 
 <style lang="scss">

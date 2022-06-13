@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import Blockquote from "/src/components/blockquote/Blockquote.vue";
+import Blockquote from "../../blockquote/Blockquote.vue";
 </script>
 
 <script lang="ts">

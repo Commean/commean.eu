@@ -34,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-import CompetitionSectionRight from "/src/components/competition/CompetitionSectionRight.vue";
+import CompetitionSectionRight from "../../competition/CompetitionSectionRight.vue";
 </script>
 
 <style lang="scss">
