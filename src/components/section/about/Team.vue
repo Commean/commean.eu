@@ -53,7 +53,7 @@
       <FloatingCardTeamMember>
         <template #heading>Hanno Kügler</template>
         <template #icon
-          ><img src="src/assets/icons/unknown.svg"
+          ><img src="/src/assets/icons/unknown.svg"
         /></template>
         <template #contact>
           <a href="mailto:hanno.kuegler@gmail.com"
