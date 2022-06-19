@@ -1,6 +1,7 @@
 # commean.eu
 
-The repository should host the website for commean.eu
+The repository contains the website for commean.eu.
+The newest version is pushed to [Docker Hub](https://hub.docker.com/r/commean/commean.eu).
 
 ## Project Setup
 
