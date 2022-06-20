@@ -3,7 +3,7 @@
 The repository contains the website for commean.eu.
 The newest version is pushed to [Docker Hub](https://hub.docker.com/r/commean/commean.eu).
 
-## Project Setup
+## Project Setup ⚙️
 
 ```sh
 npm install
